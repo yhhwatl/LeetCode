@@ -1,3 +1,4 @@
+//1.两数之和
 // function twoSum(nums: number[], target: number) {
 //     let ret = [];
 //     for (let i: number = 0; i < nums.length; i++) {
@@ -22,7 +23,7 @@
 // }
 // GET 嵌套for
 
-
+//2.两数相加
 // function addTwoNumbers(nums1, nums2) {
 //     let nums = [];
 //     let n1 = 0;
@@ -50,6 +51,7 @@
 // }
 // GET 整数解析
 
+//3.无重复字符串的最长字串
 // function lengthOfLongsSubstring(str) {
 //     let tempstr = "";
 //     let tmpMaxLen = 0;
@@ -103,3 +105,30 @@
 // }
 // let ret = findMedianSortArrays([1,3],[7]);
 // console.log("mid ret => ",ret);
+
+// 5.最长回文字符串
+// function isPal(str) {
+//     let len = Math.ceil(str.length/2);
+//     for (let index = 0; index < len; index++) {
+//         if(str[index] != str[str.length-index-1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// function longestPalingrome(s) {
+//     let palstr = "";
+//     for (let index = 0; index < s.length; index++) {
+//         let tmpstr = s[index];
+//         for (let k = index+1; k < s.length; k++) {
+//             tmpstr = tmpstr + s[k];
+//             if(isPal(tmpstr) && tmpstr.length > palstr.length) {
+//                 palstr = tmpstr;
+//             }
+//         }
+//     }
+//     return palstr;
+// }
+// let palstr = longestPalingrome("cddb");
+// console.log("palstr => ",palstr);
